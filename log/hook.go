@@ -23,7 +23,7 @@ func NewFileRotateHooker(path string, age uint32) logrus.Hook {
 		panic("Failed to create logger folder:" + path + ". err:" + err.Error())
 	}
 	filePath := path + "/reed-%Y%m%d-%H.log"
-	linkPath := path + "/reed.log"
+	linkPath := path + "/reed2.log"
 	writer, err := rotatelogs.New(
 		filePath,
 		rotatelogs.WithLinkName(linkPath),
